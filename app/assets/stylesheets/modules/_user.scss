@@ -257,6 +257,64 @@
           }
         }
       }
+      // 商品出品ページに関するCSS
+      .items-show-container{
+        h2.items-show-head{
+          background-color: #F1F1F1;
+          font-size:16px;
+          line-height: 72px;
+          padding:0 16px;
+          margin: 0;
+        }
+        ul.items-show-tabs{
+          padding: 0;
+          margin: 0;
+          li.items-show-tab-exhibition{
+            text-align: center;
+            min-width: 32%;
+            min-height: 72px;
+          }
+          li.items-show-tab{
+            float: right;
+            background-color: #eee;
+            text-align: center;
+            min-width: 32%;
+            min-height: 72px;
+
+          }
+        }
+        // 出品中商品一覧
+        .items-show-list{
+          .items-show-list.active-all{
+
+            .items-show-list.active-content{
+              height: 48px;
+              padding: 16px;
+              border-style: solid; border-width: 1px;
+              border-color: #f5f5f5;
+              a.items-show-content{
+                .items-show-content-image{
+                  float: left;
+                  width: 48px;
+                  height: 48px;
+                }
+                .items-show-content-name{
+                  float: left;
+                  margin: 0 50px 0 20px;
+                  height: 48px;
+                  width: 500px;
+                }
+                .items-show-content-icon{
+                  float: left;
+                  margin-top: 10px;
+                  height: 48px;
+                }
+              }
+            }
+          }
+        }
+
+      }
     }
   }
 }

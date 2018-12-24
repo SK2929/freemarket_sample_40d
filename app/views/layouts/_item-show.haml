@@ -1,0 +1,36 @@
+.items-show-container
+  %h2.items-show-head
+    出品した商品
+  %ul.items-show-tabs
+    %li.items-show-tab-exhibition
+      %h3
+        出品中
+    %li.items-show-tab
+      %h3
+        売却済み
+    %li.items-show-tab
+      %h3
+        取引中
+  .items-show-list
+
+    / %ul.mypage-item-list.tab-pane.active
+    /   %li.mypage-item-not-found.bold#trading
+    /     取引中の商品がありません
+
+    .items-show-list.active-all
+      .items-show-list.active-content
+        %a.items-show-content
+          .items-show-content-image
+            画像
+          .items-show-content-name
+            １つ出品しています
+          .items-show-content-icon
+            = fa_icon 'chevron-right', class: 'icon'
+      .items-show-list.active-content
+        %a.items-show-content
+          .items-show-content-image
+            画像
+          .items-show-content-name
+            ２つ出品しています
+          .items-show-content-icon
+            = fa_icon 'chevron-right', class: 'icon'
