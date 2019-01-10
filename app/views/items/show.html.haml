@@ -46,16 +46,20 @@
     %p.item-description-inner
       = simple_format @item.description
   .items-in-user-profile-container
-    - if user_signed_in? && current_user.id == @item.user_id
+    - if @item.buyer_id == nil
+      - if user_signed_in? && current_user.id == @item.user_id
+        .item-buy-container
+          %button.item-buy-btn-red{onclick: "location.href='/items/#{@item.id}/edit'",}
+            商品の編集
+        .item-buy-container
+          or
+        .item-buy-container
+          %button.item-buy-btn-gray
+            出品を停止する
+        .item-buy-container
+          %button.item-buy-btn-gray
+            = link_to( "この商品を削除する", "/items/#{@item.id}", method: :delete, data: {confirm: "本当に削除しますか？"})
+    - else
       .item-buy-container
-        %button.item-buy-btn-red{onclick: "location.href='/items/#{@item.id}/edit'",}
-          商品の編集
-      .item-buy-container
-        or
-      .item-buy-container
-        %button.item-buy-btn-gray
-          出品を停止する
-      .item-buy-container
-        %button.item-buy-btn-gray
-          = link_to( "この商品を削除する", "/items/#{@item.id}", method: :delete, data: {confirm: "本当に削除しますか？"})
+        %button.item-buy-btn-gray 売り切れています
 = render 'layouts/footer'
