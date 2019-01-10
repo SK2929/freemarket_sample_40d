@@ -49,18 +49,18 @@
                 必須
               = f.fields_for :item_categories do |item_category|
                 = item_category.collection_select :category_id, Category.all, :id, :name, {prompt: '---'}
-              %h3.details-status
-                商品の状態
-              %span.form-require
-                必須
-              %select
-                %option ---
-                %option 新品、未使用
-                %option 未使用に近い
-                %option 目立った傷や汚れなし
-                %option やや傷や汚れあり
-                %option 傷や汚れあり
-                %option 全体的に状態が悪い
+              / %h3.details-status
+              /   商品の状態
+              / %span.form-require
+              /   必須
+              / %select
+              /   %option ---
+              /   %option 新品、未使用
+              /   %option 未使用に近い
+              /   %option 目立った傷や汚れなし
+              /   %option やや傷や汚れあり
+              /   %option 傷や汚れあり
+              /   %option 全体的に状態が悪い
           .sell-items-price
             %h3.sub-head
               販売価格(300~9,999,999)
