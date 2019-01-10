@@ -2,92 +2,92 @@
 .main-user-page
   .user_container
     .user_contents
-    .l-container
-      .mypage-user-icon
-        %a
-          %figure
-            = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png', width: '60', height: '60')
-          %h2.bold ニックネーム
-          .mypage-number
-            %div
-              評価
-              %span.bold
-                0
-            %div
-              出品数
-              %span.bold
-                0
-      .mypage-tab-container-notification-todo
-        %ul.mypage-tabs#tab-list
-          %li.mypage-tabs-left
-            %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
-            %label.tab_item{:for => "all"} お知らせ
-          %li.mypage-tabs-right
-            %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
-            %label.tab_item{:for => "all"} やることリスト
-        .tab-content
-          %ul.mypage-item-list
-            %li
-              .mypage-item-link
-                %figure
-                  = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
-                .mypage-item-body
-                  .mypage-item-text
-                    事務局から個別メッセージ「【P300プレゼント】WEB限定！新規会員登録キャンペーン」
-                  %time
-                    %i.fa.fa-clock-o
-                    %span 1時間前
-                = fa_icon 'chevron-right', class: 'icon-arrow-right'
-            %li
-              .mypage-item-link
-                %figure
-                  = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
-                .mypage-item-body
-                  .mypage-item-text
-                    期間限定のお得情報】2018年話題になった賞品をプレゼント！キャンペーン詳細はこちら
-                  %time
-                    %i.fa.fa-clock-o
-                    %span 1時間前
-                = fa_icon 'chevron-right', class: 'icon-arrow-right'
-            %li
-              .mypage-item-link
-                %figure
-                  = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
-                .mypage-item-body
-                  .mypage-item-text
-                    事務局から個別メッセージ「【年末大感謝祭】いまお買い物すると、抽選で豪華賞品プレゼントGETできます！」
-                  %time
-                    %i.fa.fa-clock-o
-                    %span 1時間前
-                = fa_icon 'chevron-right', class: 'icon-arrow-right'
-            %li
-              .mypage-item-link
-                %figure
-                  = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
-                .mypage-item-body
-                  .mypage-item-text
-                  【今年の新機能をまとめてご紹介♪】メルカリは1年間でこんなに便利になりました！
-                  %time
-                    %i.fa.fa-clock-o
-                    %span 1時間前
-                = fa_icon 'chevron-right', class: 'icon-arrow-right'
-            %li
-              .mypage-go-list
-                =link_to("一覧を見る",'')
+      .l-container
+        .mypage-user-icon
+          %a
+            %figure
+              = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png', width: '60', height: '60')
+            %h2.bold ニックネーム
+            .mypage-number
+              %div
+                評価
+                %span.bold
+                  0
+              %div
+                出品数
+                %span.bold
+                  0
+        .mypage-tab-container-notification-todo
+          %ul.mypage-tabs#tab-list
+            %li.mypage-tabs-left
+              %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
+              %label.tab_item{:for => "all"} お知らせ
+            %li.mypage-tabs-right
+              %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
+              %label.tab_item{:for => "all"} やることリスト
+          .tab-content
+            %ul.mypage-item-list
+              %li
+                .mypage-item-link
+                  %figure
+                    = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
+                  .mypage-item-body
+                    .mypage-item-text
+                      事務局から個別メッセージ「【P300プレゼント】WEB限定！新規会員登録キャンペーン」
+                    %time
+                      %i.fa.fa-clock-o
+                      %span 1時間前
+                  = fa_icon 'chevron-right', class: 'icon-arrow-right'
+              %li
+                .mypage-item-link
+                  %figure
+                    = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
+                  .mypage-item-body
+                    .mypage-item-text
+                      期間限定のお得情報】2018年話題になった賞品をプレゼント！キャンペーン詳細はこちら
+                    %time
+                      %i.fa.fa-clock-o
+                      %span 1時間前
+                  = fa_icon 'chevron-right', class: 'icon-arrow-right'
+              %li
+                .mypage-item-link
+                  %figure
+                    = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
+                  .mypage-item-body
+                    .mypage-item-text
+                      事務局から個別メッセージ「【年末大感謝祭】いまお買い物すると、抽選で豪華賞品プレゼントGETできます！」
+                    %time
+                      %i.fa.fa-clock-o
+                      %span 1時間前
+                  = fa_icon 'chevron-right', class: 'icon-arrow-right'
+              %li
+                .mypage-item-link
+                  %figure
+                    = image_tag('https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png', width: '50', height: '50')
+                  .mypage-item-body
+                    .mypage-item-text
+                    【今年の新機能をまとめてご紹介♪】メルカリは1年間でこんなに便利になりました！
+                    %time
+                      %i.fa.fa-clock-o
+                      %span 1時間前
+                  = fa_icon 'chevron-right', class: 'icon-arrow-right'
+              %li
+                .mypage-go-list
+                  =link_to("一覧を見る",'')
 
-      .mypage-tab-container
-        %h2.mypage-tab-head
-          購入した商品
-        %ul.mypage-tabs
-          %li.mypage-tabs-left
-            %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
-            %label.tab_item{:for => "all"} 取引中
-          %li.mypage-tabs-right
-            %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
-            %label.tab_item{:for => "all"} 過去の取引
-        .tab-content
-          %ul.mypage-item-list.tab-pane.active
-            %li.mypage-item-not-found.bold#trading 取引中の商品がありません
+        .mypage-tab-container
+          %h2.mypage-tab-head
+            購入した商品
+          %ul.mypage-tabs
+            %li.mypage-tabs-left
+              %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
+              %label.tab_item{:for => "all"} 取引中
+            %li.mypage-tabs-right
+              %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}
+              %label.tab_item{:for => "all"} 過去の取引
+          .tab-content
+            %ul.mypage-item-list.tab-pane.active
+              %li.mypage-item-not-found.bold#trading 取引中の商品がありません
     =render "layouts/sidebar"
 
 
