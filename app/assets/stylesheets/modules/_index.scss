@@ -1,6 +1,9 @@
 #modal-content{
   z-index: 4;
 }
+#modal-overlay{
+  z-index: 3;
+}
 
 .main-contents{
   color: $black;
