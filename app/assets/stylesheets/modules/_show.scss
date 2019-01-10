@@ -1,4 +1,4 @@
-.wrapper{
+x.wrapper{
   display: block;
   background: $light_gray;
   padding-top: 40px;
@@ -110,30 +110,34 @@
   background: $white;
   width: 700px;
   padding: 10px 40px;
-  .item-buy-container{
+  .item-buy-container_mini{
     background: $white;
     margin: 10px 0;
     text-align: center;
-    .item-buy-btn-red{
+    .item-buy-btn-red_mini{
       background: $mercari_red;
       color: $white;
       margin: auto;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 14px;
+      line-height: 40px;
+      text-decoration: none;
       display: block;
       height: 40px;
-      width: 100%;
+      width: 680px;
       border: 1px solid $mercari_red;
     }
-    .item-buy-btn-gray{
+    .item-buy-btn-gray_mini{
       background: gray;
       color: $white;
       margin: auto;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 14px;
+      line-height: 40px;
+      text-decoration: none;
       display: block;
       height: 40px;
-      width: 100%;
+      width: 680px;
       border: 1px solid gray;
     }
   }
