@@ -4,7 +4,7 @@
     .items-box-content
       - @items.each do |item|
         .items-box
-          = link_to item_path(item) do
+          = link_to user_buy_screen_item_path(item) do
             %figure.items-box-photo
               = image_tag item.image.url
             .items-box-body
