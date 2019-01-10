@@ -13,10 +13,11 @@
               出品画像
             %span.form-require
               必須
+            .sell-upload-image
+              = image_tag @item.image.url, height:"160", width:"160", class: 'image'
             .file-field
               クリックしてファイルをアップロード
-            = f.label class: 'form__mask__image' do
-              = fa_icon 'picture-o', class: 'icon'
+              / = f.label class: 'form__mask__image' do
               = f.file_field :image, class: 'hidden'
             - if @item.errors.any?
               %ul.has-error-text
