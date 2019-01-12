@@ -48,18 +48,17 @@
   .items-in-user-profile-container
     - if @item.buyer_id == nil
       - if user_signed_in? && current_user.id == @item.user_id
-        .item-buy-container
-          %button.item-buy-btn-red{onclick: "location.href='/items/#{@item.id}/edit'",}
+        .item-buy-container_mini
+          %button.item-buy-btn-red_mini{onclick: "location.href='/items/#{@item.id}/edit'",}
             商品の編集
-        .item-buy-container
+        .item-buy-container_mini
           or
-        .item-buy-container
-          %button.item-buy-btn-gray
+        .item-buy-container_mini
+          %button.item-buy-btn-gray_mini
             出品を停止する
-        .item-buy-container
-          %button.item-buy-btn-gray
-            = link_to( "この商品を削除する", "/items/#{@item.id}", method: :delete, data: {confirm: "本当に削除しますか？"})
+        .item-buy-container_mini
+          = link_to( "商品の削除", "/items/#{@item.id}", method: :delete, data: {confirm: "本当に削除しますか？"}, class: "item-buy-btn-gray_mini")
     - else
-      .item-buy-container
-        %button.item-buy-btn-gray 売り切れています
+      .item-buy-container_mini
+        %button.item-buy-btn-gray_mini 売り切れています
 = render 'layouts/footer'
