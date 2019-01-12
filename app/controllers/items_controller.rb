@@ -58,15 +58,18 @@ class ItemsController < ApplicationController
   end
 
   def pay_jp
-    Payjp.api_key = 'sk_test_67bf7b9b9f7b559259f8e304'
-    charge = Payjp::Charge.create(
-    amount: @item.price,
-    card: params['payjp-token'],
-    currency: 'jpy'
-    )
-    @item.buyer_id = current_user.id
-    @item.save
-    redirect_to root_path
+    item = Item.find(params[:id])
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp::Charge.create(
+      currency: "jpy",
+      amount: item[:price],
+      card: params["payjp-token"])
+    pay_jp_item_buyer_id_update(item)
+    redirect_to root_path, notice: "支払いが完了しました"
+  end
+
+   def pay_jp_item_buyer_id_update(item)
+    item.update(buyer_id: current_user.id)
   end
 
 private
