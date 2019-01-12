@@ -1,7 +1,6 @@
 = render 'layouts/header_form'
 .main-user-page
   .user_container
-    =render "layouts/sidebar"
     .user_contents
       .card-container
         %h2.card--head
@@ -17,4 +16,5 @@
             %a.card--content--help--link
               支払い方法について
               = fa_icon 'chevron-right', class: 'icon'
+    =render "layouts/sidebar"
 = render 'layouts/footer'
