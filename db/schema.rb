@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20190112072927) do
   end
 
   create_table "customers_informations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "token"
+    t.string   "customer"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
