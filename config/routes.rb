@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get :confirm
       get :user_buy_screen
       post :pay_jp
+      post :create_customer_information
     end
     collection do
       get :search
