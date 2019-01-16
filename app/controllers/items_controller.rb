@@ -59,16 +59,21 @@ class ItemsController < ApplicationController
 
   def create_customer_information
     customer = CustomersInformation.new
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     create_customer = Payjp::Customer.create(
       email: current_user.email,
       card: params['payjp-token'])
     customer.update(customer: create_customer.id, user_id: current_user.id)
+    pay_jp(create_customer)
   end
 
   def pay_jp
     item = Item.find(params[:id])
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
-    Payjp::Charge.create(currency: "jpy", amount: item[:price], customer: customers_informations.customer)
+    Payjp::Charge.create(
+      currency: "jpy",
+      amount: item[:price],
+      customer: create_customer.id)
     pay_jp_item_buyer_id_update(item)
     redirect_to root_path, notice: "支払いが完了しました"
   end
