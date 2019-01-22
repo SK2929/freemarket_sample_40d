@@ -48,6 +48,8 @@
         %button.item-buy-btn-red
           = form_tag(action: :create_customer_information, method: :post) do
             %script.payjp-button{"data-key": "#{ENV["PAYJP_PUBLIC_KEY"]}", src: "https://checkout.pay.jp", type: "text/javascript" }
+      - else
+        %button.item-buy-btn-gray あなたが出品した商品です
     - else
       %button.item-buy-btn-gray 売り切れました
   .item-description-container

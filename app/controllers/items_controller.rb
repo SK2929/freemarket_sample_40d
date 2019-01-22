@@ -59,7 +59,6 @@ class ItemsController < ApplicationController
 
   def create_customer_information
     customer = CustomersInformation.new
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     create_customer = Payjp::Customer.create(
       email: current_user.email,
       card: params['payjp-token'])
@@ -67,7 +66,7 @@ class ItemsController < ApplicationController
     pay_jp(create_customer)
   end
 
-  def pay_jp
+  def pay_jp(create_customer)
     item = Item.find(params[:id])
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
