@@ -11,36 +11,36 @@ class Item < ApplicationRecord
   accepts_nested_attributes_for :item_categories
 
 # show_error_message_imageメソッド（画像送信）において適切なバリデーションが出るように後で編集すること
-  def show_error_message_image(item)
-    if item == nil
+  def show_error_message_image(item_image)
+    if item_image == nil
       "不備があります"
     else
       ""
     end
   end
 
-  def show_error_message_item(item)
-    if item.length == 0
+  def show_error_message_item(item_name)
+    if item_name.length == 0
       "入力してください"
-    elsif item.length > 40
+    elsif item_name.length > 40
       "40文字以下で入力してください"
     else
       ""
     end
   end
 
-  def show_error_message_idescription(item)
-    if item.length == 0
+  def show_error_message_idescription(item_idescription)
+    if item_idescription.length == 0
       "入力してください"
-    elsif item.length > 1000
+    elsif item_idescription.length > 1000
       "1000文字以下で入力してください"
     else
       ""
     end
   end
 
-  def show_error_message_price(item)
-    if (item.length == 0) || (item.to_i > 299) == false
+  def show_error_message_price(item_price)
+    if (item_price.length == 0) || (item_price.to_i > 299) == false
       "300以上9999999以下で入力してください"
     else
       ""
